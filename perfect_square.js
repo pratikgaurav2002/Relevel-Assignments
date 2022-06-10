@@ -1,18 +1,13 @@
-function isPerfectSquare(x)
-    {
-        if (x >= 0) {
-            
-            let sr = Math.sqrt(x);
-         
-            return ((sr * sr) == x);
-        }
-        return false;
-    }
-
-    let x = 22;
-  
-        if (isPerfectSquare(x))
-            console.log("Yes");
-        else
-            console.log("No");
- 
+const num = 22;
+const isPerfectSquare = num => {
+   let ind = 1;
+   while(ind * ind <= num){
+      if(ind * ind !== num){
+         ind++;
+         continue;
+      };
+      return true;
+   };
+   return false;
+};
+console.log(isPerfectSquare(num));
